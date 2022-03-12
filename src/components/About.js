@@ -1,5 +1,4 @@
 import React,{useContext,useEffect} from 'react';
-import noteContext from '../context/notes/noteContext';
 import img from './man.jpg'
 const About =() => {
 
@@ -24,7 +23,7 @@ const About =() => {
                    Dealing with grades, studying, bills, pressure from your parents,
                     and having to answer the big question: “What should I do with my life?“
                     , means there are a lot of expectations on your plate</p>
-                    <div class="logos">
+                    <div className="logos">
                    <a  className="socal" href="https://www.linkedin.com/in/anil-babu-19958a208"><i className="fab fa-linkedin "></i></a>
                     
                     <a className="socal" href="https://www.facebook.com/profile.php?id=100041724041773"><i className="fab fa-facebook"></i></a>
