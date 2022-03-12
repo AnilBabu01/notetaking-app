@@ -16,7 +16,7 @@ app.get("/api", (req, res) => {
 });
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+  res.sendFile(path.join(__dirname, '../build/index.html'));
 });
 app.listen(port, () => {
   console.log(`Take notes app  backend listening at http://localhost:${port}`);
