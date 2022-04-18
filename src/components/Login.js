@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState ,useContext} from "react";
 import { useNavigate } from "react-router-dom";
+import { alertContext } from "../context/AlertContext";
 const Login = (props) => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   let history = useNavigate();
-
+  const { showAlert } = useContext(alertContext);
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await fetch("https://notetake-app.herokuapp.com/api/auth/login", {
@@ -21,6 +22,7 @@ const Login = (props) => {
     if (json.success) {
       // Save the auth token and redirect
       localStorage.setItem("token", json.authtoken);
+      showAlert("success", "you have login successfully!");
       history("/");
     } else {
       alert("Invalid credentials");
@@ -35,7 +37,7 @@ const Login = (props) => {
     <>
     
     
-        <div style={{paddingTop:"-20px"}}  className="row d-flex justify-content-center align-items-center h-100">
+        <div style={{paddingTop:"50px"}}  className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-12 col-md-8 col-lg-6 col-xl-5 justify-content-center align-items-center"  style={{height:"300px"}}>
             <div
               className="card  text-white mainnn"

@@ -3,7 +3,7 @@ import noteContext from "../context/notes/noteContext";
 import Addnote from "./Addnote";
 import NotesItem from "./NotesItem";
 import { useNavigate } from "react-router-dom";
-function Notes() {
+function Notes(props) {
   const context = useContext(noteContext);
   const loginpage = useNavigate();
   const { notes, getnotes, editnote } = context;
@@ -164,7 +164,7 @@ function Notes() {
 
         {notes.map((note) => {
           return (
-            <NotesItem key={note._id} note={note} updatenote={updatenote} />
+            <NotesItem  showalert={props.showalert} key={note._id} note={note} updatenote={updatenote} />
           );
         })}
       </div>

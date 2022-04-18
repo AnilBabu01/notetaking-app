@@ -1,20 +1,20 @@
-import React from 'react';
-
-export default function Alert(props) {
-    const capitalized =(word)=>
-    {
-         const lower= word.toLowerCase();
-         return lower.charAt(0).toUpperCase() + lower.slice(1);  
-    }
-
+import React, { useContext } from "react";
+import { alertContext } from "../context/AlertContext";
+export default function Alert() {
+  const { alert } = useContext(alertContext);
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
   return (
-     <div style={{height: '45px'}}>
-
-   {props.alert && <div className={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
-   <strong>{ capitalized( props.alert.type)}</strong>:{props.alert.mag} 
-   
-  </div> }
-  </div>
-
-  )
+    alert && (
+      <>
+        <div className="myToast">
+          <div className={`alert alert-${alert.type}`} role="alert">
+            <strong> {capitalizeFirstLetter(alert.type)} : </strong>{" "}
+            {capitalizeFirstLetter(alert.msg)}
+          </div>
+        </div>
+      </>
+    )
+  );
 }

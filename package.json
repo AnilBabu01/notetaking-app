@@ -26,11 +26,11 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "concurrently \"react-scripts start\" \"node backend/index.js\"",
+    
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "both": "concurrently \"npm run start\" \"nodemon backend/index.js\""
+    "both": "concurrently \"react-scripts start\" \"nodemon backend/index.js\""
   },
   "eslintConfig": {
     "extends": [
@@ -51,3 +51,4 @@
     ]
   }
 }
+

@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { alertContext } from "../context/AlertContext";
 function Singup() {
   const history = useNavigate();
+  const {showAlert}= useContext(alertContext)
   const [credentials, setCredentials] = useState({
     name: "",
     email: "",
@@ -23,6 +25,7 @@ function Singup() {
     if (json.success) {
       // Save the auth token and redirect
       localStorage.setItem("token", json.authtoken);
+      showAlert("success", "You have singup successfully!");
       history("/login");
     } else {
       alert("Invalid credentials");
@@ -39,7 +42,7 @@ function Singup() {
         <div className="container h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-12 col-md-9 col-lg-7 col-xl-6">
-              <div className="card mainnn" style={{ borderRadius: "15px",marginTop: "-45px"}}>
+              <div className="card mainnn" style={{ borderRadius: "15px",marginTop: "45px"}}>
                 <div className="card-body p-5">
                   <h2 className="text-uppercase text-center mb-5" style={{marginTop: "-25px"}}>
                     Create an account

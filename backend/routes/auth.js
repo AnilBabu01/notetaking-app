@@ -89,7 +89,7 @@ router.post('/login', [
     success = true;
     res.json({ success, authtoken })
   
-      
+   console.log(authtoken)   
 
   } catch (error) {
     console.error(error.message);
@@ -113,3 +113,4 @@ router.post('/getuser', fetchuser,  async (req, res) => {
   }
 })
 module.exports = router
+

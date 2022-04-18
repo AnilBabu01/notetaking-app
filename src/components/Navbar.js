@@ -1,6 +1,6 @@
-import React from "react";
+import React,{useContext} from "react";
 import { Link ,useLocation} from "react-router-dom";
-import { useEffect } from "react";
+import { alertContext } from "../context/AlertContext";
 import { useNavigate } from "react-router-dom";
 
 
@@ -10,17 +10,15 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
 
   const redirectlogin = useNavigate();
+  const {showAlert}= useContext(alertContext)
   const logout=()=>{
     localStorage.removeItem('token');
-
+    showAlert("success", "You have Logout !");
     redirectlogin("/login")
 
   }
   let location = useLocation();
-  useEffect(() => {
-  
-  }, [location]);
-  
+ 
   return (
 
     

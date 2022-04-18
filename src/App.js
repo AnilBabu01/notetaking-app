@@ -9,56 +9,45 @@ import Login from "./components/Login";
 import Singup from "./components/Singup";
 
 
-import { useState } from "react";
+
+import AlertContext from "./context/AlertContext";
 
 
 
 
 function App() {
 
-  
-  
-  const [alert,setalert]=useState(null);
-  
-  const showalert =(messsage,type)=>
-  {
-       setalert({
-         mag:messsage,
-         type:type
-       }) 
-       
-       setTimeout(() => {
-           setalert(null);
-       }, 3000);
-  }
+
+
+
   return (
     <>
 
-    
-    
-<BrowserRouter>
-     
-       
-       
-        <Navbar />
-          
-          
-        <Alert alert={alert}/>
-        <div className="container">
+      <BrowserRouter>
         <NoteState>
-        <Routes>
-          <Route  showalert={showalert} exact key={About} path="/" element={<Home />} />
+          <AlertContext>
 
-          <Route exact  showalert={showalert} key={About} path="/About" element={<About />} />
-           
-          <Route exact showalert={showalert} key={About} path="/Login" element={<Login/>} />
-          <Route exact showalert={showalert} key={About} path="/Singup" element={<Singup/>} />
-           </Routes>
-           </NoteState>
-           </div>
+            <Navbar />
+
+
+            <Alert alert={alert} />
+            <div className="container">
+
+              <Routes>
+                <Route exact key={About} path="/" element={<Home />} />
+
+                <Route exact key={About} path="/About" element={<About />} />
+
+                <Route exact key={About} path="/Login" element={<Login />} />
+                <Route exact key={About} path="/Singup" element={<Singup />} />
+              </Routes>
+
+            </div>
+          </AlertContext>
+        </NoteState>
       </BrowserRouter>
 
-     
+
     </>
   );
 }
