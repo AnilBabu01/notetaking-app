@@ -49,7 +49,27 @@ const NoteState = (props) => {
     setnotes(notes.concat(note))
 
   };
+// get use info 
+const  getsuerInfo = async () => {
+  //todo api call
 
+  const response = await fetch(`${host}/api/auth/getuser`, {
+    method: "get",
+    headers: {
+      "Content-Type": "application/json",
+
+      "auth-token": localStorage.getItem("token")
+
+    },
+
+  });
+  const json = await response.json()
+
+  console.log(json);
+
+ 
+};
+   
 
   //delete note
   const deletenote = async (id) => {
@@ -106,7 +126,7 @@ const NoteState = (props) => {
 
 
   return (
-    <NoteContext.Provider value={{ notes, addnote, deletenote, editnote, getnotes }}>
+    <NoteContext.Provider value={{ notes, addnote, deletenote, editnote, getnotes,getsuerInfo }}>
       {props.children}
     </NoteContext.Provider>
   );

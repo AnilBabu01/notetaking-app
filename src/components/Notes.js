@@ -3,6 +3,7 @@ import noteContext from "../context/notes/noteContext";
 import Addnote from "./Addnote";
 import NotesItem from "./NotesItem";
 import { useNavigate } from "react-router-dom";
+import { alertContext } from "../context/AlertContext";
 function Notes(props) {
   const context = useContext(noteContext);
   const loginpage = useNavigate();
@@ -34,11 +35,12 @@ function Notes(props) {
       etag: currentnote.tag,
     });
   };
-
+  const { showAlert } = useContext(alertContext);
   const handleClick = (e) => {
     editnote(note.id, note.etitle, note.edescription, note.etag);
     e.preventDefault();
     refcloce.current.click();
+    showAlert("success", "Note Edit successfully!");
   };
 
   const onChange = (e) => {
@@ -79,7 +81,7 @@ function Notes(props) {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body mainnn ">
+            <div className="modal-body  ">
               <div className="container my-3 ">
                 <h2>Add a Note</h2>
                 <form className="my-3">

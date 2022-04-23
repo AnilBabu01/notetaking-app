@@ -42,7 +42,7 @@ function Singup() {
         <div className="container h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-12 col-md-9 col-lg-7 col-xl-6">
-              <div className="card mainnn" style={{ borderRadius: "15px",marginTop: "45px"}}>
+              <div className="card mainnn" style={{ borderRadius: "15px",marginTop: "45px",marginLeft:'90px',width:'400px'}}>
                 <div className="card-body p-5">
                   <h2 className="text-uppercase text-center mb-5" style={{marginTop: "-25px"}}>
                     Create an account
@@ -54,6 +54,7 @@ function Singup() {
                        Enter Your Name
                       </label>
                       <input
+                       style={{width:'300px',marginLeft:"18px"}}
                         type="text"
                         name="name"
                         onChange={onChange}
@@ -69,6 +70,7 @@ function Singup() {
                        Enter Your Email
                       </label>
                       <input
+                       style={{width:'300px',marginLeft:"18px"}}
                         type="email"
                         name="email"
                         onChange={onChange}
@@ -84,6 +86,7 @@ function Singup() {
                       Enter Password
                       </label>
                       <input
+                       style={{width:'300px',marginLeft:"18px"}}
                         type="password"
                         name="password"
                         onChange={onChange}
@@ -98,6 +101,7 @@ function Singup() {
                         Repeat your password
                       </label>
                       <input
+                       style={{width:'300px',marginLeft:"18px"}}
                         type="password"
                         name="cpassword"
                         onChange={onChange}

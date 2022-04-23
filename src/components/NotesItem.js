@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import noteContext from "../context/notes/noteContext";
 import { alertContext } from "../context/AlertContext";
+import style from './NotesItem.module.css';
+
+
 function NotesItem(props) {
   const { note, updatenote } = props;
   const context = useContext(noteContext);
@@ -12,7 +15,7 @@ function NotesItem(props) {
     <>
       <div className="col-md-3 ">
         <div className="card my-3">
-          <div className="card-body mainnn">
+          <div  className={style.card}>
             <h5>Title</h5>
             <p className="card-title">{note.title}</p>
             <h5>Description</h5>
@@ -31,12 +34,17 @@ function NotesItem(props) {
               className="fas fa-edit mx-2"
               onClick={() => {
                 updatenote(note);
-                showAlert("success", "Note Edit successfully!");
+                
               }}
             ></i>
           </div>
+
+       
         </div>
       </div>
+      
+      
+
     </>
   );
 }
