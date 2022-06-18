@@ -1,0 +1,114 @@
+section.Conttact .card-wrappers .cardddd img
+{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+}
+
+ section.Conttact .card-wrappers .cardddd 
+ {
+
+     text-align: center;
+ }
+section.Conttact .card-wrappers 
+{
+
+    display: grid;
+    grid-gap: 3rem;
+}
+ section.Conttact .card-wrappers .cardddd h1 
+ {
+
+     font-weight: 400;
+     color: var(--secondary);
+     margin-bottom: 1rem;
+ }
+  section.Conttact .card-wrappers .cardddd p 
+  {
+
+     font-size: 1rem;
+
+
+  }
+section.Conttact .input-wrapper
+{
+
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   grid-gap: 2rem;
+   margin-bottom: 2rem;
+
+}
+section.Conttact .input-wrapper2
+{
+
+   display: flex;
+   flex-direction: column;
+}
+section.Conttact .card-wrappers .cardddd h6
+{
+
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+}
+
+section.Conttact input 
+{
+
+   padding: 0.5rem 1rem;
+   border: 1px solid black;
+   font-size: 1rem;
+}
+
+section.Conttact .input-wrapper2 input
+{
+   margin-bottom: 0.5rem;
+   
+   
+}
+
+section.Conttact .input-wrapper2 textarea
+{
+
+   margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+    font-size: 1rem;
+}
+
+section.Conttact input:focus
+{
+  outline: none;
+
+}
+
+
+.btn-wrapper
+{
+    text-align: center;
+}
+
+.maincontact{
+    width: 50%;
+    height: 20%;
+}
+
+.centerdivvv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.Conttact .input-wrapper2 textarea:focus
+{
+   outline: none;
+}
+
+
+@media screen and (max-width: 780px) {
+      
+.maincontact{
+    width: 100%;
+    height: 100%;
+}
+}

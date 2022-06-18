@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import noteContext from "../context/notes/noteContext";
+import noteContext from "../../context/notes/noteContext";
 import Addnote from "./Addnote";
 import NotesItem from "./NotesItem";
 import { useNavigate } from "react-router-dom";
-import { alertContext } from "../context/AlertContext";
+import { alertContext } from "../../context/AlertContext";
+import Footer from "../Footer/Footer";
 function Notes(props) {
   const context = useContext(noteContext);
   const loginpage = useNavigate();
@@ -158,7 +159,7 @@ function Notes(props) {
         </div>
       </div>
 
-      <div className="row my-4">
+      <div className="row my-4" style={{width:"100%"}}>
         <h2>Yours Notes</h2>
         <div className="conrainer">
           {notes.length === 0 && "no notes to display"}
@@ -170,6 +171,8 @@ function Notes(props) {
           );
         })}
       </div>
+
+      <Footer/>
     </>
   );
 }

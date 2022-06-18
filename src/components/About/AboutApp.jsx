@@ -35,13 +35,15 @@ const sectionn = {
   justifyContent: "center",
   textAlign: "center",
   paddingTop: "0px",
+   padding: "12px", 
+   marginBottom: "-100px",
 };
 const AboutApp = () => {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
   return (
     <>
-      <div style={sectionn}>
+      <div style={sectionn} >
         <div style={mainDiv}>
           <h1>Application</h1>
         </div>

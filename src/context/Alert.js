@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { alertContext } from "../context/AlertContext";
+import { alertContext } from "./AlertContext";
 export default function Alert() {
   const { alert } = useContext(alertContext);
   const capitalizeFirstLetter = (string) => {

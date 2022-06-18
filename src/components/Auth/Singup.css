@@ -1,0 +1,28 @@
+
+
+.usename{
+   margin-left: 130px!important;
+}
+.mobilenow{
+   padding-top: 50px; 
+     width: 100%;
+}
+
+@media screen and (max-width: 780px) {
+   .singupmobileview{
+    border-radius: 15px!important;
+    margin-top: 45px!important;
+    margin-left: 0px!important; 
+    width: 335px!important;
+    margin-bottom: -130px!important;
+   }
+   .mobilenow{
+      padding-top: 50px; 
+        width: 95%!important;
+        margin-left: 12px;
+   }
+   
+.usename{
+   margin-left: 90px!important;
+}
+  }

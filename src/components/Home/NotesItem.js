@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import noteContext from "../context/notes/noteContext";
-import { alertContext } from "../context/AlertContext";
+import noteContext from "../../context/notes/noteContext";
+import { alertContext } from"../../context/AlertContext";
 import style from './NotesItem.module.css';
 
 
