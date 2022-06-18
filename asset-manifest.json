@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/notetaking-app/static/css/main.397930fa.css",
-    "main.js": "/notetaking-app/static/js/main.32e64a3e.js",
+    "main.js": "/notetaking-app/static/js/main.b4fb04f2.js",
     "static/media/man.jpg": "/notetaking-app/static/media/man.015c30bdc895a117e4c5.jpg",
     "index.html": "/notetaking-app/index.html",
     "main.397930fa.css.map": "/notetaking-app/static/css/main.397930fa.css.map",
-    "main.32e64a3e.js.map": "/notetaking-app/static/js/main.32e64a3e.js.map"
+    "main.b4fb04f2.js.map": "/notetaking-app/static/js/main.b4fb04f2.js.map"
   },
   "entrypoints": [
     "static/css/main.397930fa.css",
-    "static/js/main.32e64a3e.js"
+    "static/js/main.b4fb04f2.js"
   ]
 }
