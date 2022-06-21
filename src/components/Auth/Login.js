@@ -50,7 +50,7 @@ const Login = (props) => {
 
   return (
     <>
-       <div style={{height:"100px",paddingTop:"63px",}}>
+       <div style={{ paddingTop: "130px", paddingBottom: "20px", height: "100px" }}>
           < Typography style={{fontWeight:"600"}} align="center" variant="h5"> Thanks for use my Application</ Typography>
         </div>
       <Grid

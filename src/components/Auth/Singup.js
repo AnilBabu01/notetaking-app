@@ -4,7 +4,7 @@ import { alertContext } from "../../context/AlertContext";
 import Typography from "@material-ui/core/Typography";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
-import './Singup.css';
+import "./Singup.css";
 function Singup() {
   const history = useNavigate();
   const { showAlert } = useContext(alertContext);
@@ -45,12 +45,16 @@ function Singup() {
 
   return (
     <>
-        <div style={{height:"100px",paddingTop:"63px",}}>
-          < Typography style={{fontWeight:"600"}} align="center" variant="h5"> Thanks for use my Application</ Typography>
-        </div>
-     
-        
-      <div className="mask d-flex align-items-center h-100 gradient-custom-3" >
+      <div
+        style={{ paddingTop: "130px", paddingBottom: "20px", height: "100px" }}
+      >
+        <Typography style={{ fontWeight: "600" }} align="center" variant="h5">
+          {" "}
+          Thanks for use my Application
+        </Typography>
+      </div>
+
+      <div className="mask d-flex align-items-center h-100 gradient-custom-3">
         <div className="container h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-12 col-md-9 col-lg-7 col-xl-6">
@@ -66,7 +70,7 @@ function Singup() {
                 <div className="card-body p-5">
                   <h2
                     className="text-uppercase text-center mb-5"
-                    style={{ marginTop: "-25px",fontSize:"20px" }}
+                    style={{ marginTop: "-25px", fontSize: "20px" }}
                   >
                     Create an account
                   </h2>
@@ -77,7 +81,6 @@ function Singup() {
                         Enter Your Name
                       </label>
                       <input
-                       
                         type="text"
                         name="name"
                         onChange={onChange}
@@ -92,7 +95,6 @@ function Singup() {
                         Enter Your Email
                       </label>
                       <input
-                      
                         type="email"
                         name="email"
                         onChange={onChange}
@@ -107,7 +109,6 @@ function Singup() {
                         Enter Password
                       </label>
                       <input
-                      
                         type="password"
                         name="password"
                         onChange={onChange}
@@ -121,7 +122,6 @@ function Singup() {
                         Repeat your password
                       </label>
                       <input
-                       
                         type="password"
                         name="cpassword"
                         onChange={onChange}
@@ -131,22 +131,23 @@ function Singup() {
                     </div>
 
                     <div className="d-flex justify-content-center">
-                     
                       <button
-                    className="btn btn-outline-light btn-lg px-5"
-                    type="submit"
-                  >
-                    Register
-                  </button>
+                        className="btn btn-outline-light btn-lg px-5"
+                        type="submit"
+                      >
+                        Register
+                      </button>
                     </div>
 
-                    <p className="text-center  mt-5 mb-0" style={{color:"white",fontSize:"20px"}}>
+                    <p
+                      className="text-center  mt-5 mb-0"
+                      style={{ color: "white", fontSize: "20px" }}
+                    >
                       Have already an account?{" "}
                       <Link to="/Login" className="text-white-50 fw-bold">
                         <u>Login here</u>
                       </Link>
                     </p>
-                    
                   </form>
                 </div>
               </div>
@@ -154,8 +155,7 @@ function Singup() {
           </div>
         </div>
       </div>
-    
-     
+
       <Footer />
     </>
   );

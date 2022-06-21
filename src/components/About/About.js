@@ -68,7 +68,7 @@ const About = () => {
   return (
     <>
       <div className={classes.root}>
-        <AppBar position="static" style={{ backgroundColor: "yellow" }}>
+        <AppBar position="static" style={{ backgroundColor: "yellow",paddingTop: "80px"}}>
           <Tabs
             value={value}
             onChange={handleChange}

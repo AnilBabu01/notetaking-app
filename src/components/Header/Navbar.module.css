@@ -12,7 +12,9 @@
   background-color: black;
   color:white;
   box-shadow: 1px 1px 1px 1px #e2d9d9;
-  z-index :0;
+  z-index :1;
+  position: fixed;
+  width: 100%;
 }
 
 .logo {

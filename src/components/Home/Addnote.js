@@ -40,13 +40,14 @@ function Addnote() {
     <>
       <button
         style={{
-          backgroundColor: "blue",
+          backgroundColor: " #3a3ae2",
           paddingLeft: "10px",
           paddingRight: "10px",
-          marginTop: "15px",
+          marginTop: "85px",
           border: "none",
           height: "35px",
           borderRadius: "5px",
+          color:"white"
         }}
         onClick={handleClickOpen}
       >
